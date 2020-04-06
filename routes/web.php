@@ -22,3 +22,15 @@ Route::post('/usuarios/novo','UsuariosControler@novo')->name('usuario_novo');
 
 Route::get('/tela_login', 'AppController@telaLogin')->name("tela_login");
 Route::post('/login', 'AppController@login')->name('login');
+
+Route::post('/usuarios/alterar/{id}', 'UsuariosControler@alterar')->name('alterar_usuario');
+
+Route::get('/usuarios/excluir/{id}', 'UsuariosControler@excluir')->name('excluir_usuario');
+
+Route::get('/usuarios/alterar/{id}', 'UsuariosControler@alterarUsuario')->name('atualizar_usuario');
+
+Route::get('/usuarios/cadastro_vendas/{id}', 'VendaController@telaCadastroVendas')->name('venda_cadastro');
+
+Route::post('/usuarios/adicionar_venda/{id}', 'VendaController@adicionar')->name('venda_add');
+
+Route::get('/usuarios/listar_venda/{id}', 'VendaController@listar')->name('listar_venda');
